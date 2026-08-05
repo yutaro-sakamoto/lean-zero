@@ -1,0 +1,10 @@
+name = "lean-zero"
+version = "0.1.0"
+defaultTargets = ["lean-zero"]
+
+[[lean_lib]]
+name = "LeanZero"
+
+[[lean_exe]]
+name = "lean-zero"
+root = "Main"
