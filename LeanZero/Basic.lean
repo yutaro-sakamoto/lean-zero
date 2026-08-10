@@ -46,3 +46,7 @@ macro_rules
   lhs = rhs
 
 #guard [x | for x in [1, 2, 3], if x < 2] =[1]
+
+inductive MyNat where
+  | zero
+  | succ (n : MyNat)
