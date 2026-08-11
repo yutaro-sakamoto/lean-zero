@@ -50,3 +50,6 @@ macro_rules
 inductive MyNat where
   | zero
   | succ (n : MyNat)
+
+#check MyNat.zero
+#check MyNat.succ
