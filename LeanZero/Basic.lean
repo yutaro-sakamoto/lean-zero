@@ -53,3 +53,5 @@ inductive MyNat where
 
 #check MyNat.zero
 #check MyNat.succ
+
+#check MyNat.succ .zero
