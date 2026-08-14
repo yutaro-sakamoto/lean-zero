@@ -55,3 +55,6 @@ inductive MyNat where
 #check MyNat.succ
 
 #check MyNat.succ .zero
+
+def MyNat.one := MyNat.succ .zero
+def MyNat.two := MyNat.succ .one
