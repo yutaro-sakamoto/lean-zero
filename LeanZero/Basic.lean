@@ -58,3 +58,8 @@ inductive MyNat where
 
 def MyNat.one := MyNat.succ .zero
 def MyNat.two := MyNat.succ .one
+
+def MyNat.add (m n : MyNat) : MyNat :=
+  match n with
+  | .zero => m
+  | .succ n => succ (add m n)
