@@ -63,3 +63,5 @@ def MyNat.add (m n : MyNat) : MyNat :=
   match n with
   | .zero => m
   | .succ n => succ (add m n)
+
+#check MyNat.add .one .one = .two
