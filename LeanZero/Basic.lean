@@ -1,3 +1,5 @@
+import Mathlib.Data.Set.Basic
+
 def hello := "world"
 
 def eratosthenesAux (n : Nat) : Array Bool := Id.run do
@@ -65,3 +67,15 @@ def MyNat.add (m n : MyNat) : MyNat :=
   | .succ n => succ (add m n)
 
 #check MyNat.add .one .one = .two
+
+example : (n : Nat) → (n = 3 → n = 2 + 1) :=
+  fun _ h => h
+
+example : (n : Nat) → (n = 2 + 1 → n = 3) :=
+  fun _ h => h
+
+/-- `{5}` は `{2 + 3}` の部分集合である -/
+example : ({5} : Set ℕ) ⊆ {2 + 3} := by simp
+
+#check Prop
+#check (1 + 1 = 3 : Prop)
