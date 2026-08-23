@@ -79,3 +79,12 @@ example : ({5} : Set ℕ) ⊆ {2 + 3} := by simp
 
 #check Prop
 #check (1 + 1 = 3 : Prop)
+
+#check (fun n => n + 3 = 39 : Nat → Prop)
+#check True
+#check False
+
+example : True := by trivial
+
+example (P : Prop) (h : P) : P := by
+  exact h
