@@ -88,3 +88,7 @@ example : True := by trivial
 
 example (P : Prop) (h : P) : P := by
   exact h
+
+example (h : False) : ∀ x y z n : Nat,
+  n ≥ 3 → x ^ n + y ^ n = z ^ n → x * y * z = 0 := by
+  trivial
