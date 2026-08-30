@@ -21,3 +21,7 @@ theorem Nat_add_right_cancel (h : l + m = n + m) : l = n := by
     have : l + m = n + m := by
       injection lem
     exact ih this
+
+theorem Nat_left_cancel (h : l + m = l + n) : m = n := by
+  rw [Nat.add_comm l m, Nat.add_comm l n] at h
+  apply Nat.add_right_cancel h
