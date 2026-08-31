@@ -25,3 +25,9 @@ theorem Nat_add_right_cancel (h : l + m = n + m) : l = n := by
 theorem Nat_left_cancel (h : l + m = l + n) : m = n := by
   rw [Nat.add_comm l m, Nat.add_comm l n] at h
   apply Nat.add_right_cancel h
+
+section
+  attribute [local simp] Nat.add_left_cancel
+  example : l + m = l + n → m = n := by
+    simp
+end
