@@ -43,3 +43,6 @@ end
   · apply Nat.add_left_cancel
   · intro h
     rw [h]
+
+example : l + m = l + n → m = n := by
+  simp
