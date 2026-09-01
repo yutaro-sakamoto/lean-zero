@@ -31,3 +31,9 @@ section
   example : l + m = l + n → m = n := by
     simp
 end
+
+@[simp↓] theorem Nat_add_right_cancel_iff : l + m = n + m ↔ l = n := by
+  constructor
+  · apply Nat.add_right_cancel
+  · intro h
+    rw [h]
