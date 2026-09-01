@@ -37,3 +37,9 @@ end
   · apply Nat.add_right_cancel
   · intro h
     rw [h]
+
+@[simp↓] theorem Nat_add_left_cancel_iff : l + m = l + n ↔ m = n := by
+  constructor
+  · apply Nat.add_left_cancel
+  · intro h
+    rw [h]
