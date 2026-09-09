@@ -55,3 +55,12 @@ example : l + m = l + n → m = n := by
       rw [h]
       simp
     simp_all
+
+@[simp] theorem Nat_add_left_eq_self : n + m = m ↔ n = 0 := by
+  constructor <;> intro h
+  case mpr => simp_all
+  case mp =>
+    have : n + m = m + 0 := by
+      rw [h]
+      simp
+    simp_all
